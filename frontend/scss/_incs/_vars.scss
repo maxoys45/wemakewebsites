@@ -3,44 +3,22 @@
 $black : #000000;
 $white : #FFFFFF;
 
-$grey--dark : #757575;
-$grey--darker : #212121;
-$grey : #BDBDBD;
-$grey--light : #EEEEEE;
-$grey--lighter : #F5F5F5;
+$dark : #191919;
 
-$turquoise : #00A1B6;
-$turquoise--dark : #006064;
-$orange : #DC582F;
-$orange--dark : #BF360C;
-$gold : #FFD600;
-$gold--dark : #FB8C00;
+$header-blue : #ced9e4;
+$header-blue-light : #e9f0f7;
 
-$moderation : #FFEF94;
-
-$green : #00C853;
-
-$nav--blue : #3CB8FF;
-$nav--yellow : #FFCD3C;
-$nav--yellow : #FFC314; // yellow alternative, more readable
-$nav--purple : #721B6C;
-$nav--orange : #DF3F17;
-
-$teal : #5dbcb1;
-$yellow: #f3ca3e;
-$lightblue: #96ade8;
-$lime : #71dec1;
-$orange: #e03d01;
-$lightpurple : #9f429b;
+$cta-blue : #2d4966;
 
 // FONTS
 
-$font--default : 'Roboto', sans-serif;
+$font--default : 'Open Sans', sans-serif;
+$font--title : 'Abril Fatface', serif;
 
 // WEIGHTS
 
-$font--reg : 300;
-$font--semibold : 400;
+$font--reg : 400;
+$font--semibold : 600;
 $font--bold : 700;
 
 // SCREEN SIZES
@@ -57,8 +35,9 @@ $wrap : 1224; // 1024 + 100px padding either side
 
 // MISC
 
-$fontSize--default : 2rem;
-$fontSize--small : 1.5rem;
+$fontSize--default : 1.6rem;
+$fontSize--small : 1.4rem;
+$fontSize--large : 1.8rem;
 $lineHeight--default : 1.3;
 $radius : .2rem;
 $vspacer : 4rem;

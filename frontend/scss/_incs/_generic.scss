@@ -30,8 +30,8 @@ h1 {
 }
 
 h2 {
-	font-size     : 4em;
-	margin-bottom : .2em;
+	font-size     : 4.2em;
+	margin-bottom : .4em;
 
 	@include bp($scr--phablet) {
 	    font-size:5em;
@@ -101,13 +101,13 @@ strong {
 .input--default {
 	@include inline-block;
 	cursor          : default;
-	border          : 1px solid $grey--light;
+//	border          : 1px solid $grey--light;
 	border-radius   : $radius;
 	background      : $white;
 	padding         : 1.5rem 1rem;
 	font-size       : $fontSize--default;
 	outline         : none;
-	color           : $grey--darker;
+//	color           : $grey--darker;
 	text-align      : left;
 	position        : relative;
 	min-width       : 150px;
@@ -119,17 +119,19 @@ strong {
 	}
 
 	&:focus, &:active {
-		border-color : $turquoise;
+//		border-color : $turquoise;
 	}
 }
-
 
 .stripInput {
 	border     : none;
 	background : none;
 	padding    : 0;
 	cursor     : pointer;
-	outline    : none;
+}
+
+button {
+	@extend .stripInput;
 }
 
 .hiddenInputs {

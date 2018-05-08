@@ -1,4 +1,4 @@
-const data = require('./data');
+const tns = require('./libs/tiny-slider');
 
 var tools = {
 
@@ -23,8 +23,8 @@ var tools = {
     },
 
     selectors: {
-
-
+        body: document.querySelector('body'),
+        burger: document.querySelector('.mobileBurger')
     },
 
     options: {
@@ -33,9 +33,40 @@ var tools = {
 
     setup: function () {
 
+        this.initSlider();
+
     },
 
     events: function () {
+
+        this.selectors.burger.addEventListener('click', this.toggleNav.bind(this), false);
+
+    },
+
+    toggleNav: function(e) {
+        e.preventDefault();
+
+        const body = this.selectors.body;
+
+        if(body.classList.contains('nav-open')) {
+            body.classList.remove('nav-open');
+        } else {
+            body.classList.add('nav-open');
+        }
+    },
+
+    initSlider: function() {
+
+        const slider = tns({
+            container: '.my-slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            speed: 600,
+            autoplayTimeout: 5000,
+            autoplayButton: false,
+            autoplayButtonOutput: false
+        });
 
     }
 

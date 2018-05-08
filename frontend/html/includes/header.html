@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Template</title>
+    <title>We Make Websites</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -17,22 +17,64 @@
 
     <header class="header">
 
-        <nav class="mainNav">
+        <div class="topBar">
 
-            <ul class="mainNav__list">
+            <ul class="currencySelector">
 
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--home" href="#.html">Home</a>
+                <li class="currencySelector__item">
+                    <button class="btn">GB</button>
                 </li>
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--about" href="#.html">About</a>
-                </li>
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--contact" href="#.html">Contact</a>
+
+                <li class="currencySelector__item">
+                    <button class="btn">USD</button>
                 </li>
 
             </ul>
 
-        </nav>
+            <button class="languageSelector">
+
+                UK
+
+            </button>
+
+            <div class="header__announcement">
+                Announce Something Here
+            </div>
+
+        </div>
+
+        <div class="navigationContainer">
+
+            <button class="mobileBurger">MENU</button>
+
+            <img class="logoMain" src="assets/img/logo-main.svg" />
+
+            <nav class="mainNav">
+
+                <ul class="mainNav__list">
+
+                    @@loop('main-nav.html', [
+                        { "text" : "Home", "link" : "#" },
+                        { "text" : "Collections", "link" : "#" },
+                        { "text" : "Lookbook", "link" : "#" },
+                        { "text" : "About", "link" : "#" }
+                    ])
+
+                </ul>
+
+            </nav>
+
+            <ul class="headerIcons__list">
+
+                @@loop('header-icons.html', [
+                    { "icon" : "search", "text" : "Search", "mobile" : "mobileHide" },
+                    { "icon" : "profile", "text" : "My profile", "mobile" : "mobileHide" },
+                    { "icon" : "heart", "text" : "Like", "mobile" : "mobileHide" },
+                    { "icon" : "bag", "text" : "View basket", "mobile" : "" }
+                ])
+
+            </ul>
+
+        </div>
 
     </header>

@@ -8,6 +8,7 @@
 	padding:.4em 1.2em;
 	text-transform: uppercase;
 	background-color:transparent;
+	text-align: center;
 
 	&:hover, &:focus, &:active {
 		background-color:rgba($white, 0.5);
@@ -62,7 +63,7 @@ body {
 }
 
 .header {
-	overflow:hidden;
+//	overflow:hidden;
 	position:relative;
 }
 
@@ -128,7 +129,7 @@ body {
 	display:flex;
 	justify-content: space-between;
 	align-items:center;
-	padding:1em 2em;
+	padding:3.5em 2em;
 
 	@include bp($scr--tablet) {
 		padding:2em 2em;
@@ -150,7 +151,9 @@ body {
 }
 
 .logoMain {
-
+	@include bp($scr--tablet, max-width) {
+		@include center-item;
+	}
 }
 
 .mainNav {
@@ -225,6 +228,7 @@ body {
 	&__list {
 		display:flex;
 		align-items:center;
+		position:relative;
 	}
 
 	&__item {
@@ -254,6 +258,149 @@ body {
 	}
 }
 
+.overlay {
+	background-color:$white;
+	box-shadow:0 0 .3em rgba($black, 0.2);
+	position:absolute;
+	z-index:50;
+	top: 100%;
+	margin-top: 1.5em;
+	padding:1.5em;
+
+	@include bp($scr--phablet) {
+		padding:3em;
+	}
+
+	&__arrow {
+		background:url($imgassets + 'overlay-arrow.png') center center no-repeat;
+		width:1.8em;
+		height:.9em;
+		position:absolute;
+		bottom:100%;
+		right:1.1em;
+
+		@include bp($scr--wrap) {
+			right:5.1em;
+		}
+	}
+
+	&__inner {
+
+	}
+}
+
+.cart {
+	&__overlay {
+		width:30em;
+		right:-1em;
+		display:none;
+
+		@include bp($scr--tablet) {
+			width: 36em;
+		}
+
+		@include bp($scr--wrap) {
+			right:-5em;
+		}
+
+		.bag-open & {
+			display:block;
+		}
+	}
+
+	&__title {
+		font-size: 2em;
+		letter-spacing: 1px;
+		font-weight: $font--bold;
+		margin-bottom: 1.3em;
+	}
+
+	&__list {
+
+	}
+
+	&__item {
+		@include transition(.5s, opacity);
+		border-top:1px solid rgba($black, 0.1);
+		padding:1.5em 0;
+		display:flex;
+		align-items: flex-start;
+		position:relative;
+
+		&.remove {
+			opacity:0;
+		}
+
+		&__thumbnail {
+			background-color:$grey;
+			padding:3em;
+			margin-right:1.5em;
+		}
+
+		&__img {
+			max-width:4.5em;
+			width:100%;
+		}
+
+		&__details {
+			flex: 1 1 auto;
+			padding-right:2.1em;
+		}
+
+		&__title {
+
+		}
+
+		&__variant {
+
+		}
+	}
+
+	&__remove {
+		@include icomoon(icon-cancel);
+		position:absolute;
+		top:1.5em;
+		right:0;
+		font-size:1.1em;
+	}
+
+	&__quantity {
+		margin:1em 0;
+		display:flex;
+		align-items:center;
+
+		&__btn {
+			@include icomoon {
+				font-size:1em;
+				padding:.5em;
+				display:block;
+			}
+
+			&.icon-minus {
+				@include icomoonicon(icon-minus);
+			}
+
+			&.icon-plus {
+				@include icomoonicon(icon-plus);
+			}
+		}
+
+		&__value {
+			margin:0 .5em;
+			font-size:$fontSize--default;
+		}
+	}
+
+	&__cost {
+		@extend .cart__title;
+		margin-bottom:0;
+	}
+
+	&__checkout {
+		width:100%;
+		margin-top:1em;
+	}
+}
 /* CONTENT */
 
 /* SLIDER */
@@ -356,6 +503,4 @@ body {
 	&-img {
 		width:100%;
 	}
-
-
 }

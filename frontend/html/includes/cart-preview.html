@@ -1,0 +1,23 @@
+<div class="overlay cart__overlay">
+
+    <span class="overlay__arrow"></span>
+
+    <div class="overlay__inner">
+
+        <div class="cart__title">Your Cart</div>
+
+        <ul class="cart__list">
+
+            @@loop('cart-item.html', [
+                { "title" : "Product title", "variant" : "Variant name", "price" : "60.00", "thumb" : "img-placeholder.svg" },
+                { "title" : "Product title 2", "variant" : "Variant name 2", "price" : "45.00", "thumb" : "img-placeholder.svg" }
+
+            ])
+
+        </ul>
+
+        <a class="btn btn-blue cart__checkout" href="#">Checkout</a>
+
+    </div>
+
+</div>

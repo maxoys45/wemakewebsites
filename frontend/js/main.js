@@ -24,7 +24,10 @@ var tools = {
 
     selectors: {
         body: document.querySelector('body'),
-        burger: document.querySelector('.mobileBurger')
+        burger: document.querySelector('.mobileBurger'),
+        bag: document.querySelector('.headerIcons__btn.icon-bag'),
+        cartList: document.querySelector('.cart__list'),
+        cartRemove: document.querySelectorAll('.cart__remove')
     },
 
     options: {
@@ -39,20 +42,43 @@ var tools = {
 
     events: function () {
 
-        this.selectors.burger.addEventListener('click', this.toggleNav.bind(this), false);
+        this.selectors.burger.addEventListener('click', () => {
+            this.toggleBodyClass('nav-open');
+        });
+
+        this.selectors.bag.addEventListener('click', () => {
+            this.toggleBodyClass('bag-open');
+        });
+
+        const cartRemove = this.selectors.cartRemove;
+
+        for(var i = 0; i < cartRemove.length; i++) {
+            cartRemove[i].addEventListener('click', this.removeCartItem);
+
+        }
 
     },
 
-    toggleNav: function(e) {
-        e.preventDefault();
-
+    toggleBodyClass: function(bodyClass) {
         const body = this.selectors.body;
 
-        if(body.classList.contains('nav-open')) {
-            body.classList.remove('nav-open');
+        if(body.classList.contains(bodyClass)) {
+            body.classList.remove(bodyClass);
         } else {
-            body.classList.add('nav-open');
+            body.classList.add(bodyClass);
         }
+    },
+
+    removeCartItem: function() {
+
+        const cartItem = this.parentNode;
+
+        cartItem.classList.add('remove');
+
+        cartItem.addEventListener('transitionend', () => {
+            cartItem.style.display = 'none';
+        }, false);
+
     },
 
     initSlider: function() {

@@ -45,8 +45,15 @@ h3 {
 }
 
 h4 {
-	font-size:1.4em;
-	margin-bottom:.5em;
+	font-size: 1.6em;
+	margin-bottom: .3em;
+	letter-spacing: 1px;
+}
+
+h5 {
+	font-size: 1.2em;
+	letter-spacing: .5px;
+	color: darken($grey, 30%);
 }
 
 a, button, input, textarea {

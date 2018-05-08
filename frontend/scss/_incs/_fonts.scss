@@ -10,15 +10,21 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:    url('../fonts/icomoon/icomoon.eot?1pqizd');
-    src:    url('../fonts/icomoon/icomoon.eot?1pqizd#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon/icomoon.ttf?1pqizd') format('truetype'),
-    url('../fonts/icomoon/icomoon.woff?1pqizd') format('woff'),
-    url('../fonts/icomoon/icomoon.svg?1pqizd#icomoon') format('svg');
+    src:    url('../fonts/icomoon/icomoon.eot?hctuk2');
+    src:    url('../fonts/icomoon/icomoon.eot?hctuk2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?hctuk2') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?hctuk2') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?hctuk2#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
+.icon-minus {
+	content: "\e90b";
+}
+.icon-plus {
+	content: "\e90a";
+}
 .icon-down-arrow {
 	content: "\e900";
 }

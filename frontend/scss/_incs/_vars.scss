@@ -1,0 +1,66 @@
+// COLORS
+
+$black : #000000;
+$white : #FFFFFF;
+
+$grey--dark : #757575;
+$grey--darker : #212121;
+$grey : #BDBDBD;
+$grey--light : #EEEEEE;
+$grey--lighter : #F5F5F5;
+
+$turquoise : #00A1B6;
+$turquoise--dark : #006064;
+$orange : #DC582F;
+$orange--dark : #BF360C;
+$gold : #FFD600;
+$gold--dark : #FB8C00;
+
+$moderation : #FFEF94;
+
+$green : #00C853;
+
+$nav--blue : #3CB8FF;
+$nav--yellow : #FFCD3C;
+$nav--yellow : #FFC314; // yellow alternative, more readable
+$nav--purple : #721B6C;
+$nav--orange : #DF3F17;
+
+$teal : #5dbcb1;
+$yellow: #f3ca3e;
+$lightblue: #96ade8;
+$lime : #71dec1;
+$orange: #e03d01;
+$lightpurple : #9f429b;
+
+// FONTS
+
+$font--default : 'Roboto', sans-serif;
+
+// WEIGHTS
+
+$font--reg : 300;
+$font--semibold : 400;
+$font--bold : 700;
+
+// SCREEN SIZES
+
+$scr--phablet : 480;
+$scr--tablet : 768;
+$scr--std: 960;
+$scr--wrap : 1024;
+$scr--wrappad : 1224;
+
+// MIXIN WRAP
+
+$wrap : 1224; // 1024 + 100px padding either side
+
+// MISC
+
+$fontSize--default : 2rem;
+$fontSize--small : 1.5rem;
+$lineHeight--default : 1.3;
+$radius : .2rem;
+$vspacer : 4rem;
+$imgassets : '../img/';
+$duration : .1s;
